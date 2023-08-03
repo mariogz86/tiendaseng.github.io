@@ -10,6 +10,12 @@
 	</head>
     <body>
         <div id="contenido"  class="container-fluid"  >
+
+            <input type="button" id="button" value="Ver .txt"></input>
+<div class="text">
+  <hr />
+  <h2>Texto:</h2>
+</div>
  
 
             <div class="form-group">
@@ -31,6 +37,25 @@
 			
 			
         };
+
+        $("#button").click( function()
+            {
+            //var TXT_URL = 'https://www.mozilla.org/media/MPL/2.0/index.815ca599c9df.txt';
+            var TXT_URL = $("#input-url").val();
+
+                $.ajax
+                (
+                    {
+                        url : "https://mariogz86.github.io/webchat.github.io/chateo.txt",
+                        dataType: "text",
+                        success : function (data) 
+                        {
+                            $(".text").html("<pre>"+data+"</pre>");
+                        }
+                    }
+                );
+            });
+            
  
         function IrFormularioCrear(){
             window.location = "Registro.html";
