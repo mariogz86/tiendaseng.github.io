@@ -8,14 +8,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     
 	</head>
-    <body>
-        <div id="contenido"  class="container-fluid"  >
-
-            <input type="button" id="button" value="Ver .txt"></input>
-<div class="text">
-  <hr />
-  <h2>Texto:</h2>
-</div>
+    <body> 
  
 
             <div class="form-group">
@@ -37,24 +30,7 @@
 			
 			
         };
-
-        $("#button").click( function()
-            {
-            //var TXT_URL = 'https://www.mozilla.org/media/MPL/2.0/index.815ca599c9df.txt';
-            var TXT_URL = $("#input-url").val();
-
-                $.ajax
-                (
-                    {
-                        url : "https://mariogz86.github.io/webchat.github.io/chateo.txt",
-                        dataType: "text",
-                        success : function (data) 
-                        {
-                            $(".text").html("<pre>"+data+"</pre>");
-                        }
-                    }
-                );
-            });
+ 
             
  
         function IrFormularioCrear(){
